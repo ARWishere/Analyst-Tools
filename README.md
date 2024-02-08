@@ -1,6 +1,6 @@
 # Financial Analyst Python Tools
 
-This repository contains a collection of Python tools tailored for financial analysts. These tools are built using the `tkinter` library for the user interface. In order to run them, you could just download and run the scripts, but it's reccomended that the the user use `pyinstaller` to create an executable or application file. All projects output csv files to the users local /Downloads/ folder, the LinkedIn scraper asks the user for a location to download. 
+This repository contains a collection of Python tools tailored for financial analysts. These tools are built using the `tkinter` library for the user interface. In order to run them, you could just download and run the scripts, but it's reccomended that the the user use `pyinstaller` to create an executable or application file. All projects output csv files to the users local /Downloads/ folder, the LinkedIn scraper asks the user for a location to download.
 
 **Make sure to read below, as you must supply your own API key or account depending on the project you run!**
 
