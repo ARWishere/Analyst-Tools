@@ -8,12 +8,14 @@ This repository contains a collection of Python tools tailored for financial ana
 
 ### 1. LinkedIn Employee Scraper
 
-This tool utilizes the unofficial LinkedIn API to scrape employee information from LinkedIn profiles. It enables users to gather data for analysis and insights related to professionals on the platform. More specifically, it gets the users name (if possible), they're headline, and their location (or subline). It then attempts to pull the users role from the headline. It pulls ~3 users per second.
+This tool utilizes the unofficial LinkedIn API to scrape employee information from LinkedIn profiles. It enables users to gather data for analysis and insights related to employees of companies. More specifically, it gets the users name (if possible), they're headline, and their location (or subline). It then attempts to pull the users role from the headline. It pulls ~3 users per second. 
+
+**In its current state, this only pulls 1000 employees for any given company. A workaround is being worked on.**
 
 #### Usage
 1. Install the required packages using `pip install -r requirements.txt`.
-2. Sign in with your LinkedIn account by entering your username and password at the top of the script.
-3. Run the script to start scraping employee data or application.
+2. Sign in with your LinkedIn account by entering your username and password at the top of the linkedin_scraper.py.
+3. Run the script to start scraping employee data.
 
 #### PyInstaller Usage
 1. Download the LinkedIn directory.
@@ -42,7 +44,7 @@ The Plane Tracker tool leverages the Open Sky Network API and the Aero Data Box 
 #### Usage
 1. Install the required packages using `pip install -r requirements.txt`.
 2. Obtain an API key from [RapidAPI](https://rapidapi.com/aedbx-aedbx/api/aerodatabox/pricing).
-3. Copy and paste your API key into the `rapidapi-key` variable at the top of the script.
+3. Copy and paste your API key into the `rapidapi-key` variable at the top of planetracker.py.
 4. Run the script to track planes and access flight data.
 
 #### PyInstaller Usage
