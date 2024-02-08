@@ -26,7 +26,7 @@ from tkcalendar import DateEntry
 import sys
 from datetime import datetime, timedelta
 
-# closes login prompt on GlassDoor
+# closes login prompt on GlassDoor, feel free to add this to your bookmarks and use it
 close_login = """
 (function() {
     function addGlobalStyle(css) {
@@ -206,7 +206,7 @@ def find_element_approval(element):
                 # to tell us if this is an x or a check
                 d_attribute = element.find_element('xpath', './/*[name()="path"]').get_attribute("d")
                 # the way we differentiate these 2 cases is if it starts with an uppercase or lowercase m
-                # M = x mark, m = check mark
+                # M = x mark icon = No, m = check mark icon = Yes
                 if d_attribute.startswith("M"):
                     return "No"
                 if d_attribute.startswith("m"):

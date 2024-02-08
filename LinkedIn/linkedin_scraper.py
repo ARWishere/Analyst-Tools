@@ -220,7 +220,6 @@ def get_company_id_from_name(companyName):
     return companyObj['urn_id']
 
 
-# currently trying to fix errors with pop up window not closing
 def verify_company_gui(companies):
     """
     Verify the correct company using a GUI.
@@ -299,7 +298,7 @@ def categorize_job(Li_job, job_list):
 
         possible_jobs = filtered_jobs
 
-        # check char similarity and get two highest
+        # check similarity and get two highest
         print(possible_jobs)
         if len(possible_jobs) != 0:
             for job in possible_jobs:
@@ -374,7 +373,6 @@ def finish_up(employee_lists):
         employee_lists (list): A 2D list containing employee data for a company.
 
     """
-    # employee lists is a 2d list of employees for a company
     global location
     updateStatus("Storing data to file")
     try:

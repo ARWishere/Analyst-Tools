@@ -301,7 +301,7 @@ def get_data_for_date(date, icao):
     if not response.ok:
         print("error")
         print(response.status_code)
-    # while rate limited, generate a new response and sleep until un rate limited
+    # while rate limited (429 error), generate a new response and sleep until un rate limited
     while response.status_code == 429:
         response = requests.get(url, headers=headers, params=querystring)
         print("rate limited")
