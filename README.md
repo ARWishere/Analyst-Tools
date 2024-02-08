@@ -8,7 +8,7 @@ This repository contains a collection of Python tools tailored for financial ana
 
 ### 1. LinkedIn Employee Scraper
 
-This tool utilizes the unofficial LinkedIn API to scrape employee information from LinkedIn profiles. It enables users to gather data for analysis and insights related to employees of companies. More specifically, it gets the users name (if possible), they're headline, and their location (or subline). It then attempts to pull the users role from the headline. It pulls ~3 users per second. 
+This tool utilizes the unofficial LinkedIn API to scrape employee information from LinkedIn profiles. It enables users to gather data for analysis and insights related to employees of companies. More specifically, it gets the users name (if possible), they're headline, and their location (or subline). It then attempts to pull the users role from the headline. It pulls ~3 users per second. This project also caches the json responses used to collect data, so in the event that a network issue occurs mid scrape, progress can be easily restored. The user can clear the cache in advanced options. Advanced options also has a login for the user, as well an option to only scrape a certain number of employees.
 
 **In its current state, this only pulls 1000 employees for any given company. A workaround is being worked on.**
 
@@ -20,7 +20,7 @@ This tool utilizes the unofficial LinkedIn API to scrape employee information fr
 #### PyInstaller Usage
 1. Download the LinkedIn directory.
 2. Install [PyInstaller](https://pyinstaller.org/en/stable/installation.html).
-3. Edit linkedin_scraper.py to add your username and password and save the file.
+3. Edit linkedin_scraper.py to add your username and password and save the file. Alternativaely, use the advanced options in the client and enter your username and password there.
 4. Run `python -m PyInstaller --onefile --windowed --hidden-import "babel.numbers" --add-data “/path/to/jobs.csv:.” "path/to/linkedin_scraper.py"`.
 
 ### 2. Glassdoor Review Scraper
@@ -61,8 +61,8 @@ The Plane Tracker tool leverages the Open Sky Network API and the Aero Data Box 
 - `pyinstaller`
 - Selenium
 - [Unofficial LinkedIn API](https://github.com/tomquirk/linkedin-api)
-- airportsdata
-- icao-nnumber-converter-us
+- `airportsdata`
+- `icao-nnumber-converter-us`
 - Undetected Chrome driver
 - Requests (for Open Sky Network API)
 - API key from RapidAPI (for Aero Data Box API)
