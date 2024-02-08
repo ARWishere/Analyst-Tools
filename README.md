@@ -1,6 +1,8 @@
 # Financial Analyst Python Tools
 
-This repository contains a collection of Python tools tailored for financial analysts. These tools are built using the `tkinter` library for the user interface. In order to run them, the user must use `pyinstaller` to create an executable or application file. All projects output csv files to the users local /Downloads/ folder.
+This repository contains a collection of Python tools tailored for financial analysts. These tools are built using the `tkinter` library for the user interface. In order to run them, you could just download and run the scripts, but it's reccomended that the the user use `pyinstaller` to create an executable or application file. All projects output csv files to the users local /Downloads/ folder, the LinkedIn scraper asks the user for a location to download. 
+
+**Make sure to read below, as you must supply your own API key or account depending on the application you run!**
 
 ## Projects
 
@@ -11,7 +13,13 @@ This tool utilizes the unofficial LinkedIn API to scrape employee information fr
 #### Usage
 1. Install the required packages using `pip install -r requirements.txt`.
 2. Sign in with your LinkedIn account by entering your username and password at the top of the script.
-3. Run the script to start scraping employee data.
+3. Run the script to start scraping employee data or application.
+
+#### PyInstaller Usage
+1. Download the LinkedIn directory.
+2. Install [PyInstaller](https://pyinstaller.org/en/stable/installation.html).
+3. Edit linkedin_scraper.py to add your username and password and save the file.
+4. Run `python -m PyInstaller --onefile --windowed --hidden-import "babel.numbers" --add-data “/path/to/jobs.csv:.” "path/to/linkedin_scraper.py"`.
 
 ### 2. Glassdoor Review Scraper
 
@@ -21,6 +29,12 @@ The Glassdoor Review Scraper employs Selenium and an undetected Chrome driver to
 1. Install the required packages using `pip install -r requirements.txt`.
 2. Run the script to initiate the scraping process and retrieve Glassdoor reviews.
 
+#### PyInstaller Usage
+1. Download the GlassDoor directory.
+2. Install [PyInstaller](https://pyinstaller.org/en/stable/installation.html).
+3. Run `python -m PyInstaller --onefile --windowed --hidden-import "babel.numbers" "/path/to/glassdoor_scraper.py"`.
+4. Find and run the application. 
+
 ### 3. Plane Tracker
 
 The Plane Tracker tool leverages the Open Sky Network API and the Aero Data Box API to get historic flight data. Users can monitor flight data for analysis and research purposes.
@@ -28,8 +42,16 @@ The Plane Tracker tool leverages the Open Sky Network API and the Aero Data Box 
 #### Usage
 1. Install the required packages using `pip install -r requirements.txt`.
 2. Obtain an API key from [RapidAPI](https://rapidapi.com/aedbx-aedbx/api/aerodatabox/pricing).
-3. Copy and paste the API key into the `rapidapi-key` variable at the top of the script.
+3. Copy and paste your API key into the `rapidapi-key` variable at the top of the script.
 4. Run the script to track planes and access flight data.
+
+#### PyInstaller Usage
+1. Download the Plane Tracker directory.
+2. Install [PyInstaller](https://pyinstaller.org/en/stable/installation.html).
+3. Obtain an API key from [RapidAPI](https://rapidapi.com/aedbx-aedbx/api/aerodatabox/pricing).
+4. Copy and paste your API key into the `rapidapi-key` variable in planetracker.py and save the file.
+5. Run `python -m PyInstaller --onefile --windowed --add-binary="/path/to/airportsdata/:airportsdata/" --hidden-import "babel.numbers" "/path/to/planetracker.py"`.
+6. Find and run the application. 
 
 ## Requirements
 - Python 3.x
