@@ -36,6 +36,9 @@ The Plane Tracker tool leverages the Open Sky Network API and the Aero Data Box 
 - `tkinter`
 - `pyinstaller`
 - Selenium
+- [Unofficial LinkedIn API](https://github.com/tomquirk/linkedin-api)
+- airportsdata
+- icao-nnumber-converter-us
 - Undetected Chrome driver
 - Requests (for Open Sky Network API)
 - API key from RapidAPI (for Aero Data Box API)
